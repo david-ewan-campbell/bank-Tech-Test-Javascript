@@ -1,0 +1,26 @@
+{
+  "name": "banktechtestjavascript",
+  "version": "1.0.0",
+  "description": "`The project - to build a simple working banking app in Javascript that can run in the Node REPL, based on the Makers Bank Tech Test challenge`",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-ewan-campbell/bank-Tech-Test-Javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david-ewan-campbell/bank-Tech-Test-Javascript/issues"
+  },
+  "homepage": "https://github.com/david-ewan-campbell/bank-Tech-Test-Javascript#readme",
+  "dependencies": {
+    "jest": "^29.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}
