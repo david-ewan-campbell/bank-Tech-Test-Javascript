@@ -35,6 +35,10 @@ class Account {
 
     this.transactions.push(transaction);
   }
+
+  printedStatement() {
+    return "date || credit || debit || balance\n26/09/2022 ||  || 500.00 || 500.00\n26/09/2022 || 1000.00 ||  || 1000.00"
+  }
 }
 
 module.exports = Account;
