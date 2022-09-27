@@ -36,8 +36,21 @@ class Account {
     this.transactions.push(transaction);
   }
 
-  printedStatement() {
-    return "date || credit || debit || balance\n26/09/2022 ||  || 500.00 || 500.00\n26/09/2022 || 1000.00 ||  || 1000.00"
+  statementPrintOut() {
+    return "date || credit || debit || balance\n" + this.statementFormat();
+  }
+
+  statementFormat() {
+    let transactionHistory = this.transactions.reverse();
+    let statement = [];
+
+    transactionHistory.forEach((transaction) => {
+      statement.push(
+        `${transaction.date} || ${transaction.credit} || ${transaction.debit} || ${transaction.balance}`
+      );
+    });
+    
+    return statement.join("\n");
   }
 }
 

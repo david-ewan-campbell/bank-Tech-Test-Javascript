@@ -23,12 +23,12 @@ describe("Account", () => {
     let account = new Account();
     jest
       .spyOn(global.Date, "now")
-      .mockImplementationOnce(() => new Date("2022-09-12T23:13:31.060Z"));
+      .mockImplementation(() => new Date("2022-09-27T11:19:00.060Z"));
 
     account.deposit(1000);
     expect(account.transactions).toEqual([
       {
-        date: "13/09/2022",
+        date: "27/09/2022",
         credit: "1000.00",
         debit: "",
         balance: "1000.00",
@@ -40,13 +40,13 @@ describe("Account", () => {
     let account = new Account();
     jest
       .spyOn(global.Date, "now")
-      .mockImplementationOnce(() => new Date("2022-09-26T23:13:31.060Z"));
+      .mockImplementation(() => new Date("2022-09-27T11:19:00.060Z"));
 
     account.deposit(1000);
     account.withdrawal(500);
 
     expect(account.transactions[1]).toEqual({
-        date: "26/09/2022",
+        date: "27/09/2022",
         credit: "",
         debit: "500.00",
         balance: "500.00",
@@ -57,13 +57,13 @@ describe("Account", () => {
     let account = new Account();
     jest
       .spyOn(global.Date, "now")
-      .mockImplementationOnce(() => new Date("2022-09-26T23:13:31.060Z"));
+      .mockImplementation(() => new Date("2022-09-27T11:19:00.060Z"));
 
     account.deposit(1000);
     account.withdrawal(500);
 
-    expect(account.printedStatement()).toEqual(
-      "date || credit || debit || balance\n26/09/2022 ||  || 500.00 || 500.00\n26/09/2022 || 1000.00 ||  || 1000.00"
+    expect(account.statementPrintOut()).toEqual(
+      "date || credit || debit || balance\n27/09/2022 ||  || 500.00 || 500.00\n27/09/2022 || 1000.00 ||  || 1000.00"
     );
   });
 });
