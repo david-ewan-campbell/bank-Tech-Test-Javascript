@@ -1,7 +1,9 @@
 module.exports = {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"jest": true,
+		"node": true
 	},
 	"extends": "eslint:recommended",
 	"overrides": [
@@ -12,7 +14,7 @@ module.exports = {
 	},
 	"rules": {
 		"indent": [
-			"error",
+			"off",
 			"tab"
 		],
 		"linebreak-style": [
